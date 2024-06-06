@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    background-color: #072200;
+}
+
+h1, h2, h3, p {
+    color: #ffffff;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    font-size: 30px;
+    text-decoration: none;
+    color: red;
+}
+
+.form_left{
+color: #ffffff;
+
+}
+nav {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+nav li {
+    text-decoration: underline;
+    margin-right: 30px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+    max-width: 150px;
+    margin-top: 2rem;
+}
+
+header,
+main,
+footer {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/*BURGER-MENU*/
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.bar {
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+    transition: 0.4s;
+    width: 30px;
+    height: 2px;
+}
+
+.close-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.close-icon .bar {
+    width: 35px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+.burger-menu.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-3px, -2px);
+}
+
+.burger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-14px, -7px);
+}
+
+ .mushroom_grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 20px;
+ }
+
+ .mushroom_single {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+
+ .month_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   text-align: center;
+   margin-top: 1rem;
+ }
+
+ .read_more {
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+ }
+
+@media (max-width: 800px) {
+    .burger {
+        display: flex;
+        align-items: end;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .nav.active ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .nav.active ul li {
+        padding: 10px;
+    }
+
+   
+}
+
+
+
